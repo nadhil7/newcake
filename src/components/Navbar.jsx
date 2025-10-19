@@ -50,11 +50,11 @@ function NavBar() {
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-8">
           {[
-            { name: "Home", link: "./index.html" },
-            { name: "About", link: "./about.html" },
-            { name: "Shop", link: "./shop.html" },
-            { name: "Blog", link: "./blog.html" },
-            { name: "Contact", link: "./contact.html" },
+            // { name: "Home", link: "./index.html" },
+            // { name: "About", link: "./about.html" },
+            // { name: "Shop", link: "./shop.html" },
+            // { name: "Blog", link: "./blog.html" },
+            { name: "Contact", link: "#contact" },
           ].map((item) => (
             <a
               key={item.name}
@@ -80,7 +80,7 @@ function NavBar() {
       {mobileMenuOpen && (
         <nav className="md:hidden bg-white text-center py-4 font-bold shadow-lg border-t border-pink-100 animate-slideDown">
           <ul className="space-y-4">
-            <li>
+            {/* <li>
               <a
                 href="./index.html"
                 className="block text-lg text-gray-800 hover:text-pink-600 transition"
@@ -111,10 +111,10 @@ function NavBar() {
               >
                 Blog
               </a>
-            </li>
+            </li> */}
             <li>
               <a
-                href="./contact.html"
+                href="#contact"
                 className="block text-lg text-gray-800 hover:text-pink-600 transition"
               >
                 Contact

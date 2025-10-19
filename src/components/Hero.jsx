@@ -1,6 +1,6 @@
 export default function Hero() {
     return (
-        <section className="bg-gradient-to-r from-pink-100 via-pink-50 to-pink-200 py-24 text-center">
+        <section className="bg-gradient-to-r  from-pink-100 via-pink-50 to-pink-200 py-24 text-center lg:hidden">
             <h1 className="text-5xl font-extrabold text-pink-700 mb-6 max-w-2xl mx-auto">
                 Making your life sweeter one bite at a time!
             </h1>

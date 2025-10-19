@@ -11,7 +11,7 @@ export default function Contact() {
   ];
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-pink-50 via-white to-yellow-50">
+    <section id="contact" className="py-20 px-4 bg-gradient-to-b from-pink-50 via-white to-yellow-50">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
         
         {/* Left Side - Contact Form */}
