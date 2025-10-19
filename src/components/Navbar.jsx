@@ -86,7 +86,7 @@ function NavBar() {
                 className="block text-lg text-gray-800 hover:text-pink-600 transition"
               >
                 Home
-              </a>
+              </p>
             </li>
             <li>
               <p
@@ -94,7 +94,7 @@ function NavBar() {
                 className="block text-lg text-gray-800 hover:text-pink-600 transition"
               >
                 About
-              </a>
+              </p>
             </li>
             {/* <li>
               <a
