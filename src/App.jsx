@@ -1,7 +1,6 @@
 import React from "react";
 import NavBar from "./components/Navbar";
 import HeroSlider from "./components/Heroslider";
-import CategoriesSlider from "./components/Category";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import Team from "./components/Team";
@@ -14,10 +13,9 @@ export default function App() {
     <div className="font-sans bg-pink-50 min-h-screen">
       <NavBar />
       <HeroSlider />
-      <About />
-      <CategoriesSlider />
       <Shop />
       <Team />
+      <About />
       <Testimonials />
       <Contact />
       <Footer />
