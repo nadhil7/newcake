@@ -1,48 +1,60 @@
 export default function About() {
-    return (
-        <>
-            <section className="about spad py-12">
-                <div className="container mx-auto px-4">
-                    <div className="flex flex-wrap -mx-4">
-                        <div className="w-full md:w-1/2 px-4">
-                            <div className="about__text">
-                                <div className="section-title mb-6">
-                                    <span className="text-orange-600 uppercase tracking-widest text-sm">About Cake shop</span>
-                                    <h2 className="text-4xl font-serif font-semibold italic mt-2">
-                                        Cakes and bakes from the house of Queens!
-                                    </h2>
-                                </div>
-                                <p className="text-gray-700 text-base leading-relaxed">
-                                    The "Cake Shop" is a Jordanian Brand that started as a small family business. The owners are Dr. Iyad Sultan and Dr. Sereen Sharabati, supported by a staff of 80 employees.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="w-full md:w-1/2 px-4">
-                            <div className="about__bar space-y-6">
-                                <div className="about__bar__item">
-                                    <p className="text-gray-600 font-semibold tracking-wide mb-1">Cake design</p>
-                                    <div className="bg-gray-300 rounded-full h-4 w-full overflow-hidden">
-                                        <div className="bg-black h-4 rounded-full w-[95%]" />
-                                    </div>
-                                </div>
-                                <div className="about__bar__item">
-                                    <p className="text-gray-600 font-semibold tracking-wide mb-1">Cake Class</p>
-                                    <div className="bg-gray-300 rounded-full h-4 w-full overflow-hidden">
-                                        <div className="bg-black h-4 rounded-full w-[80%]" />
-                                    </div>
-                                </div>
-                                <div className="about__bar__item">
-                                    <p className="text-gray-600 font-semibold tracking-wide mb-1">Cake Recipes</p>
-                                    <div className="bg-gray-300 rounded-full h-4 w-full overflow-hidden">
-                                        <div className="bg-black h-4 rounded-full w-[90%]" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+  return (
+    <section className="bg-gradient-to-r from-pink-50 via-white to-yellow-50 py-20">
+      <div className="max-w-7xl mx-auto px-6 lg:px-16 flex flex-col lg:flex-row items-center gap-16">
+        {/* Left Image Side */}
+        <div className="flex-1 w-full">
+          <div className="relative group">
+            <img
+              src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=1000&q=80"
+              alt="Delicious Cake"
+              className="rounded-3xl shadow-2xl w-full object-cover h-[420px] lg:h-[500px] transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-tr from-pink-300/10 to-transparent rounded-3xl"></div>
+          </div>
+        </div>
 
-        </>
-    );
+        {/* Right Text Side */}
+        <div className="flex-1 text-center lg:text-left">
+          <span className="text-pink-600 uppercase tracking-widest text-sm font-semibold">
+            About Cake Shop
+          </span>
+
+          <h2 className="text-5xl lg:text-6xl font-serif font-semibold italic text-gray-900 mt-5 leading-tight">
+            Cakes and bakes from the house of Queens!
+          </h2>
+
+          <p className="text-gray-700 text-lg leading-relaxed mt-6 max-w-2xl mx-auto lg:mx-0">
+            The <span className="font-semibold text-pink-700">"Cake Shop"</span> started as a small family bakery and grew into a
+            beloved brand known for its artistry and flavor. Founded by{" "}
+            <span className="font-medium text-gray-800">Dr. Iyad Sultan</span> and{" "}
+            <span className="font-medium text-gray-800">Dr. Sereen Sharabati</span>, 
+            we’ve been perfecting the art of baking to bring joy and warmth in every bite.
+          </p>
+
+          {/* Skill Bars */}
+          <div className="mt-12 space-y-8 max-w-xl mx-auto lg:mx-0">
+            {[
+              { label: "Cake Design", percent: 95 },
+              { label: "Cake Classes", percent: 80 },
+              { label: "Cake Recipes", percent: 90 },
+            ].map((bar, i) => (
+              <div key={i}>
+                <div className="flex justify-between mb-1">
+                  <span className="text-gray-800 font-semibold">{bar.label}</span>
+                  <span className="text-pink-600 font-bold">{bar.percent}%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                  <div
+                    className="bg-gradient-to-r from-pink-400 to-pink-600 h-3 rounded-full"
+                    style={{ width: `${bar.percent}%` }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

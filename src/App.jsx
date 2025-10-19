@@ -11,7 +11,7 @@ import About from "./components/About";
 
 export default function App() {
   return (
-    <div className="font-sans bg-pink-50 min-h-screen">
+    <div className="font-sans bg-pink-50 min-h-screen ">
       <NavBar />
       <HeroSlider />
       <About />

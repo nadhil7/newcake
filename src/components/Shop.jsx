@@ -1,68 +1,112 @@
+import white from '../Pictures/white.jpg';
+import black from '../Pictures/buter.jpg';
+import stawberry from  '../Pictures/stawberry.jpg';
+import choclate from  '../Pictures/black.jpeg';
+import caramel from  '../Pictures/butterscotch.jpeg';
+
+
+
 export default function Shop() {
-    const cakes = [
-        {
-            title: "Dozen Cupcakes",
-            price: "32.00",
-            image:
-                "https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=600&q=60",
-        },
-        {
-            title: "Cookies and Cream",
-            price: "30.00",
-            image:
-                "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=60",
-        },
-        {
-            title: "Gluten Free Mini Dozen",
-            price: "31.00",
-            image:
-                "https://images.unsplash.com/photo-1519864600265-abb23843b8d4?auto=format&fit=crop&w=600&q=60",
-        },
-        {
-            title: "Cookie Dough",
-            price: "25.00",
-            image:
-                "https://images.unsplash.com/photo-1447078806655-40579c2520d6?auto=format&fit=crop&w=600&q=60",
-        },
-        {
-            title: "Vanilla Salted Caramel",
-            price: "5.00",
-            image:
-                "https://images.unsplash.com/photo-1519864709115-3ebc61e25232?auto=format&fit=crop&w=600&q=60",
-        },
-        {
-            title: "German Chocolate",
-            price: "14.00",
-            image:
-                "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=60",
-        },
-    ];
+const cakes = [
+  {
+    title: "Dozen Cupcakes",
+    price: "32.00",
+    image: white,
+    description:
+      "A perfect dozen of soft, fluffy cupcakes topped with creamy frosting — ideal for any celebration or sweet craving.",
+  },
+  {
+    title: "Cookies and Cream",
+    price: "30.00",
+    image:
+      caramel,
+    description:
+      "Rich layers of chocolate and vanilla cream blended with crushed cookies for that irresistible crunch.",
+  },
+  {
+    title: "Gluten Free Mini Dozen",
+    price: "31.00",
+    image: black,
+    description:
+      "Moist and flavorful gluten-free mini cupcakes — baked with love and topped with silky buttercream.",
+  },
+  {
+    title: "Cookie Dough",
+    price: "25.00",
+    image:
+      "https://images.unsplash.com/photo-1447078806655-40579c2520d6?auto=format&fit=crop&w=600&q=60",
+    description:
+      "Soft vanilla cake layered with edible cookie dough and chocolate chunks — the ultimate comfort dessert.",
+  },
+  {
+    title: "Vanilla Salted Caramel",
+    price: "5.00",
+    image: stawberry,
+    description:
+      "A creamy vanilla base drizzled with golden salted caramel — sweet, salty, and simply irresistible.",
+  },
+  {
+    title: "German Chocolate",
+    price: "14.00",
+    image:
+      choclate,
+    description:
+      "Classic German chocolate cake layered with coconut-pecan frosting — rich, nutty, and indulgent.",
+  },
+];
+
+
 
     return (
-        <section id="shop" className="bg-gradient-to-b from-pink-50 to-white py-16 px-4">
-            <div className="max-w-6xl mx-auto">
-                <h2 className="text-3xl font-bold text-pink-700 text-center mb-10">
-                    Classic Cakes
-                </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                    {cakes.map((cake) => (
-                        <div
-                            key={cake.title}
-                            className="bg-white rounded-2xl shadow hover:shadow-xl transition p-5"
-                        >
-                            <img
-                                src={cake.image}
-                                alt={cake.title}
-                                className="w-full h-44 object-cover rounded-xl mb-4"
-                            />
-                            <div className="flex justify-between items-center">
-                                <h3 className="text-lg font-semibold text-pink-700">{cake.title}</h3>
-                                <span className="text-pink-500 font-bold">${cake.price}</span>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+<section
+  id="shop"
+  className="bg-gradient-to-br from-pink-100 via-white to-pink-50 py-20 px-6"
+>
+  <div className="max-w-7xl mx-auto text-center">
+    <h2 className="text-5xl font-extrabold text-pink-700 mb-4 tracking-tight">
+      Classic Cakes
+    </h2>
+    <p className="text-gray-500 mb-12 max-w-2xl mx-auto text-lg">
+      Indulge in our handcrafted selection of premium cakes — baked with love,
+      layered with delight, and frosted to perfection.
+    </p>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+      {cakes.map((cake) => (
+        <div
+          key={cake.title}
+          className="group relative bg-white rounded-3xl shadow-sm transition-all duration-300 overflow-hidden transform hover:-translate-y-2"
+        >
+          <div className="overflow-hidden rounded-t-3xl">
+            <img
+              src={cake.image}
+              alt={cake.title}
+              className="w-full h-56 object-cover transform group-hover:scale-110 transition duration-500"
+            />
+          </div>
+
+          <div className="p-6 text-left">
+            <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-pink-700 transition">
+              {cake.title}
+            </h3>
+            <p className="text-gray-500 mb-4 text-md">
+              {cake.description}
+            </p>
+
+            <div className="flex justify-between items-center">
+              <span className="text-pink-600 font-bold text-lg">
+                ${cake.price}
+              </span>
+              <button className="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-full text-sm transition-all shadow-md hover:shadow-lg">
+                Add to Cart
+              </button>
             </div>
-        </section>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
     );
 }
