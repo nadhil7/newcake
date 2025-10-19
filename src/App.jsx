@@ -1,7 +1,6 @@
 import React from "react";
 import NavBar from "./components/Navbar";
 import HeroSlider from "./components/Heroslider";
-import CategoriesSlider from "./components/Category";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import Team from "./components/Team";
