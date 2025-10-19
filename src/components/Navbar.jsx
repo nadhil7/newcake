@@ -8,7 +8,7 @@ function NavBar() {
     <header className="bg-gradient-to-r from-pink-100 via-white to-orange-100 shadow-lg sticky top-0 z-50">
       {/* Top Bar */}
       {/* <div className="border-b border-pink-200 py-2 hidden md:block"> */}
-        {/* <div className="max-w-7xl mx-auto flex justify-between items-center px-6 text-sm text-gray-600">
+      {/* <div className="max-w-7xl mx-auto flex justify-between items-center px-6 text-sm text-gray-600">
           <ul className="flex space-x-6">
             <li className="hover:text-pink-600 transition cursor-pointer">
               USD <span className="text-gray-400">▼</span>
@@ -48,12 +48,12 @@ function NavBar() {
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-8">
+        {/* <nav className="hidden md:flex space-x-8">
           {[
             { name: "Home", link: "./index.html" },
             { name: "About", link: "./about.html" },
-            // { name: "Shop", link: "./shop.html" },
-            // { name: "Blog", link: "./blog.html" },
+            { name: "Shop", link: "./shop.html" },
+            { name: "Blog", link: "./blog.html" },
             { name: "Contact", link: "./contact.html" },
           ].map((item) => (
             <a
@@ -65,7 +65,7 @@ function NavBar() {
               <span className="absolute bottom-[-6px] left-0 w-0 h-[2px] bg-pink-500 transition-all duration-300 group-hover:w-full hover:w-full"></span>
             </a>
           ))}
-        </nav>
+        </nav> */}
 
         {/* Mobile Menu Button */}
         <button
@@ -114,8 +114,9 @@ function NavBar() {
             {/* </li> */}
             <li>
               <a
-                href="./contact.html"
+                href="#contact"
                 className="block text-lg text-gray-800 hover:text-pink-600 transition"
+                
               >
                 Contact
               </a>

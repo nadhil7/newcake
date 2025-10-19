@@ -57,8 +57,11 @@ export default function Shop() {
 
   const [showWhatsApp, setShowWhatsApp] = useState(false);
 
-  const handleOrderClick = () => {
-    setShowWhatsApp(true);
+  const handleOrderClick = (name, price) => {
+    const whatsappNumber = "919895253797";
+    const message = encodeURIComponent(`Hello, I would like to order the "${name}" (${price}).`);
+    const href = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${message}`;
+    window.open(href,'_blank')
   };
 
   return (
@@ -104,7 +107,7 @@ export default function Shop() {
                     </span>
                     <button
                       className="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-full text-sm transition-all shadow-md hover:shadow-lg"
-                      onClick={handleOrderClick}
+                      onClick={() => { handleOrderClick(cake.title, cake.price) }}
                     >
                       Order
                     </button>
@@ -116,7 +119,7 @@ export default function Shop() {
         </div>
       </section>
 
-      
+
     </>
   );
 
