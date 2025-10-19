@@ -15,9 +15,9 @@ export default function App() {
       <NavBar />
       <HeroSlider />
       <About />
-      <CategoriesSlider />
+      {/* <CategoriesSlider /> */}
       <Shop />
-      <Team />
+      {/* <Team /> */}
       <Testimonials />
       <Contact />
       <Footer />
