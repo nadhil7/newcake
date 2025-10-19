@@ -52,8 +52,8 @@ function NavBar() {
           {[
             { name: "Home", link: "./index.html" },
             { name: "About", link: "./about.html" },
-            { name: "Shop", link: "./shop.html" },
-            { name: "Blog", link: "./blog.html" },
+            // { name: "Shop", link: "./shop.html" },
+            // { name: "Blog", link: "./blog.html" },
             { name: "Contact", link: "./contact.html" },
           ].map((item) => (
             <a
@@ -81,7 +81,7 @@ function NavBar() {
         <nav className="md:hidden bg-white text-center py-4 font-bold shadow-lg border-t border-pink-100 animate-slideDown">
           <ul className="space-y-4">
             <li>
-              <a
+              <p
                 href="./index.html"
                 className="block text-lg text-gray-800 hover:text-pink-600 transition"
               >
@@ -89,14 +89,14 @@ function NavBar() {
               </p>
             </li>
             <li>
-              <a
+              <p
                 href="./about.html"
                 className="block text-lg text-gray-800 hover:text-pink-600 transition"
               >
                 About
               </p>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="./shop.html"
                 className="block text-lg text-gray-800 hover:text-pink-600 transition"
@@ -110,8 +110,8 @@ function NavBar() {
                 className="block text-lg text-gray-800 hover:text-pink-600 transition"
               >
                 Blog
-              </a>
-            </li>
+              </a> */}
+            {/* </li> */}
             <li>
               <a
                 href="./contact.html"
