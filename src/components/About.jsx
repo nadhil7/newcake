@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
     return (
-        <section className="bg-gradient-to-r from-pink-50 via-white to-pink-50 py-20">
+        <section className="bg-gradient-to-r from-pink-100 via-white to-pink-50 py-20">
             <div className="max-w-7xl mx-auto px-6 lg:px-16 flex flex-col lg:flex-row items-center gap-16">
                 {/* Left Image Side */}
                 <div className="flex-1 w-full">
@@ -11,7 +11,7 @@ export default function About() {
                         initial={{ opacity: 0, y: 50, scale: 0.95 }}
                         whileInView={{ opacity: 1, y: 0, scale: 1 }}
                         viewport={{ once: true, amount: 0.3 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        transition={{ duration: 1.3, ease: "easeOut" }}
                         whileHover={{ scale: 1.05 }}
                     >
                         <img
@@ -25,7 +25,12 @@ export default function About() {
                 </div>
 
                 {/* Right Text Side */}
-                <div className="flex-1 text-center lg:text-left">
+                <motion.div className="flex-1 text-center lg:text-left"
+                    initial={{ opacity: 0, x: 50, scale: 0.95 }}
+                    whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 1.3, ease: "easeOut" }}
+                    whileHover={{ scale: 1.05 }}>
                     <span className="text-pink-600 uppercase tracking-widest text-sm font-semibold">
                         About Cake Shop
                     </span>
@@ -63,7 +68,7 @@ export default function About() {
                             </div>
                         ))}
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );
