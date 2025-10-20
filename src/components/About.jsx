@@ -4,6 +4,7 @@ export default function About() {
     return (
         <section className="bg-gradient-to-r from-pink-100 via-white to-pink-50 py-20">
             <div className="max-w-7xl mx-auto px-6 lg:px-16 flex flex-col lg:flex-row items-center gap-16">
+                
                 {/* Left Image Side */}
                 <div className="flex-1 w-full">
                     <motion.div
@@ -12,7 +13,6 @@ export default function About() {
                         whileInView={{ opacity: 1, y: 0, scale: 1 }}
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 1.3, ease: "easeOut" }}
-                        whileHover={{ scale: 1.05 }}
                     >
                         <img
                             src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=1000&q=80"
@@ -21,16 +21,16 @@ export default function About() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-tr from-pink-300/10 to-transparent rounded-3xl transition-opacity group-hover:opacity-50"></div>
                     </motion.div>
-
                 </div>
 
                 {/* Right Text Side */}
-                <motion.div className="flex-1 text-center lg:text-left"
+                <motion.div
+                    className="flex-1 text-center lg:text-left"
                     initial={{ opacity: 0, x: 50, scale: 0.95 }}
                     whileInView={{ opacity: 1, x: 0, scale: 1 }}
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 1.3, ease: "easeOut" }}
-                    whileHover={{ scale: 1.05 }}>
+                >
                     <span className="text-pink-600 uppercase tracking-widest text-sm font-semibold">
                         About Cake Shop
                     </span>
