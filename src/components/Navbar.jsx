@@ -8,7 +8,7 @@ function NavBar() {
     <header className="bg-gradient-to-r from-pink-100 via-white to-orange-100 shadow-lg sticky top-0 z-50">
       {/* Top Bar */}
       {/* <div className="border-b border-pink-200 py-2 hidden md:block"> */}
-        {/* <div className="max-w-7xl mx-auto flex justify-between items-center px-6 text-sm text-gray-600">
+      {/* <div className="max-w-7xl mx-auto flex justify-between items-center px-6 text-sm text-gray-600">
           <ul className="flex space-x-6">
             <li className="hover:text-pink-600 transition cursor-pointer">
               USD <span className="text-gray-400">▼</span>
@@ -48,7 +48,7 @@ function NavBar() {
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-8">
+        {/* <nav className="hidden md:flex space-x-8">
           {[
             // { name: "Home", link: "./index.html" },
             // { name: "About", link: "./about.html" },
@@ -65,7 +65,7 @@ function NavBar() {
               <span className="absolute bottom-[-6px] left-0 w-0 h-[2px] bg-pink-500 transition-all duration-300 group-hover:w-full hover:w-full"></span>
             </a>
           ))}
-        </nav>
+        </nav> */}
 
         {/* Mobile Menu Button */}
         <button
@@ -80,23 +80,23 @@ function NavBar() {
       {mobileMenuOpen && (
         <nav className="md:hidden bg-white text-center py-4 font-bold shadow-lg border-t border-pink-100 animate-slideDown">
           <ul className="space-y-4">
-            {/* <li>
-              <a
+            <li>
+              <p
                 href="./index.html"
                 className="block text-lg text-gray-800 hover:text-pink-600 transition"
               >
                 Home
-              </a>
+              </p>
             </li>
             <li>
-              <a
+              <p
                 href="./about.html"
                 className="block text-lg text-gray-800 hover:text-pink-600 transition"
               >
                 About
-              </a>
+              </p>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="./shop.html"
                 className="block text-lg text-gray-800 hover:text-pink-600 transition"
@@ -110,12 +110,13 @@ function NavBar() {
                 className="block text-lg text-gray-800 hover:text-pink-600 transition"
               >
                 Blog
-              </a>
-            </li> */}
+              </a> */}
+            {/* </li> */}
             <li>
               <a
                 href="#contact"
                 className="block text-lg text-gray-800 hover:text-pink-600 transition"
+                
               >
                 Contact
               </a>
