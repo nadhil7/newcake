@@ -50,11 +50,11 @@ function NavBar() {
         {/* Desktop Nav */}
         {/* <nav className="hidden md:flex space-x-8">
           {[
-            { name: "Home", link: "./index.html" },
-            { name: "About", link: "./about.html" },
-            { name: "Shop", link: "./shop.html" },
-            { name: "Blog", link: "./blog.html" },
-            { name: "Contact", link: "./contact.html" },
+            // { name: "Home", link: "./index.html" },
+            // { name: "About", link: "./about.html" },
+            // { name: "Shop", link: "./shop.html" },
+            // { name: "Blog", link: "./blog.html" },
+            { name: "Contact", link: "#contact" },
           ].map((item) => (
             <a
               key={item.name}
