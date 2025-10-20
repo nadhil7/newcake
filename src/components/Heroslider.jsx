@@ -26,7 +26,7 @@ function HeroSlider() {
     };
 
     return (
-        <section className="relative lg:hidden" >
+        <section className="relative lg:hidden">
             <div className="overflow-hidden">
                 <div className="flex transition-transform duration-700"
                     style={{ transform: `translateX(-${active * 100}%)` }}>
