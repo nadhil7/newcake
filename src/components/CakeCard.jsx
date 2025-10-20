@@ -28,6 +28,11 @@ const cakes = [
 ];
 
 function CakeCard({ cake }) {
+    // WhatsApp phone (country code + number, no + or spaces)
+    const whatsappNumber = "918113948278";
+    // Message to pre-fill
+    const message = encodeURIComponent(`Hello, I would like to order the "${cake.name}" (${cake.price}).`);
+
     return (
         <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
             <img
@@ -39,11 +44,17 @@ function CakeCard({ cake }) {
                 <h3 className="text-xl font-semibold text-pink-600">{cake.name}</h3>
                 <p className="text-gray-600 mt-2">{cake.description}</p>
                 <p className="text-pink-500 font-bold mt-4">{cake.price}</p>
-                <button className="mt-4 bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 transition">
+                <a
+                    href={`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${message}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-full text-sm transition-all shadow-md hover:shadow-lg"
+                >
                     Order Now
-                </button>
+                </a>
             </div>
         </div>
     );
 }
+
 export default CakeCard;
