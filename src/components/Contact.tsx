@@ -1,6 +1,4 @@
-import React, { useRef } from 'react';
 import { motion } from "framer-motion";
-import emailjs from 'emailjs-com';
 import black from "../Pictures/black.jpeg";
 import white from "../Pictures/white.jpg";
 
@@ -24,7 +22,7 @@ export default function Contact() {
               Contact Us
             </h2>
             <p className="text-gray-600 mb-8 text-lg">
-              Reach out to us: <span className="font-medium text-pink-600">watsapp</span>
+              Reach out to us: <span className="font-medium text-pink-600">cakefairy1@gmail.com</span>
             </p>
           </div>
 
