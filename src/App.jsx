@@ -7,6 +7,7 @@ import Team from "./components/Team";
 import Testimonials from "./components/Testimonials";
 import Shop from "./components/Shop";
 import About from "./components/About";
+import Marquee from "./components/Marquee";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <About />
       {/* <CategoriesSlider /> */}
       <Shop />
+      <Marquee />
       {/* <Team /> */}
       <Testimonials />
       <Contact />
