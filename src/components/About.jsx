@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
     return (
-        <section className="bg-gradient-to-r from-pink-100 via-white to-pink-50 py-20">
+        <section className="bg-gradient-to-r from-pink-100 via-white to-pink-50 md:py-20">
             <div className="max-w-7xl mx-auto px-6 lg:px-16 flex flex-col lg:flex-row items-center gap-16">
                 
                 {/* Left Image Side */}
