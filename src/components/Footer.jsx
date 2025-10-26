@@ -1,6 +1,8 @@
 import React from 'react';
 import footer from '../assets/footer.jpg'
 import blackfooter from '../assets/footerblack.jpg'
+import orglogo from '../assets/orglogo.jpeg'
+import instagramIcon from '../assets/instagram.png'
 const Footer = () => {
     return (
         <footer
@@ -25,38 +27,56 @@ const Footer = () => {
                         <div className="mb-8">
                             <a href="/">
                                 <img
-                                    src="/img/footer-logo.png"
+                                    src={orglogo}
                                     width={120}
                                     height={40}
                                     alt="Footer Logo"
-                                    className="mx-auto mb-6"
+                                    className="mx-auto mb-6 rounded-full"
                                 />
                             </a>
                         </div>
+
                         <p className="text-sm text-[#a4a4a4] leading-6 mb-6 max-w-xs">
-                            Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.
+                            Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore dolore magna aliqua.
                         </p>
+
                         <div className="flex gap-2 justify-center">
-                            <a href="#" className="bg-white/10 text-white h-[45px] w-[45px] rounded-full flex items-center justify-center text-xl hover:bg-[#f08632] transition">
-                                <i className="fa fa-facebook" />
+                            {/* <a
+                                href="#"
+                                className="bg-white/10 text-white h-[45px] w-[45px] rounded-full flex items-center justify-center hover:bg-[#f08632] transition"
+                            >
+                                <img src="/icons/facebook.png" alt="Facebook" className="h-6 w-6" />
+                            </a> */}
+                            {/* <a
+                                href="#"
+                                className="bg-white/10 text-white h-[45px] w-[45px] rounded-full flex items-center justify-center hover:bg-[#f08632] transition"
+                            >
+                                <img src="/icons/twitter.png" alt="Twitter" className="h-6 w-6" />
+                            </a> */}
+                            <a
+                                href="https://www.instagram.com/cake__fairy1?igsh=MXI2bXI4cmJ3ejd4eQ=="
+                                className="bg-white/10 text-white h-[45px] w-[45px] rounded-full flex items-center justify-center hover:scale-110 transition transform"
+                            >
+                                <img src={instagramIcon} alt="Instagram" className="h-9 w-9" />
                             </a>
-                            <a href="#" className="bg-white/10 text-white h-[45px] w-[45px] rounded-full flex items-center justify-center text-xl hover:bg-[#f08632] transition">
-                                <i className="fa fa-twitter" />
-                            </a>
-                            <a href="#" className="bg-white/10 text-white h-[45px] w-[45px] rounded-full flex items-center justify-center text-xl hover:bg-[#f08632] transition">
-                                <i className="fa fa-instagram" />
-                            </a>
-                            <a href="#" className="bg-white/10 text-white h-[45px] w-[45px] rounded-full flex items-center justify-center text-xl hover:bg-[#f08632] transition">
-                                <i className="fa fa-youtube-play" />
-                            </a>
+                            {/* <a
+                                href="#"
+                                className="bg-white/10 text-white h-[45px] w-[45px] rounded-full flex items-center justify-center hover:bg-[#f08632] transition"
+                            >
+                                <img src="/icons/youtube.png" alt="YouTube" className="h-6 w-6" />
+                            </a> */}
                         </div>
                     </div>
+
                     {/* Newsletter */}
                     <div className="flex-1 md:pl-8">
                         <div>
                             <h6 className="text-white font-semibold uppercase mb-5">Subscribe</h6>
-                            <p className="text-sm text-[#a4a4a4] leading-6 mb-6">Get latest updates and offers.</p>
-                            <form action="#" className="relative">
+                            <p className="text-xl text-white leading-6 mb-6">Get latest updates and offers .</p>
+                            <p className="text-xl text-[#a4a4a4] leading-6 mb-6"></p>
+
+                            {/* <form action="#" className="relative">
                                 <input
                                     type="text"
                                     placeholder="Email"
@@ -68,7 +88,7 @@ const Footer = () => {
                                 >
                                     <i className="fa fa-send-o" />
                                 </button>
-                            </form>
+                            </form> */}
                         </div>
                     </div>
                 </div>

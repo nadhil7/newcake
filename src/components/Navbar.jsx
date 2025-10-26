@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import logo from "../Pictures/logo.jpg";
+import sitelog from '../assets/newcakelogo.jpg'
+import orglogo from '../assets/orglogo.jpeg'
 
 function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -38,11 +40,11 @@ function NavBar() {
       {/* </div> */}
 
       {/* Main Navigation */}
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <div className="max-w-7xl mx-auto md:h-25 flex justify-between items-center px-6 py-4">
         {/* Logo */}
         <a href="./index.html" className="flex items-center space-x-2">
-          <img src={logo} alt="Logo" className="h-10 " />
-          <span className="text-2xl font-bold text-pink-700 tracking-tight">
+          <img src={orglogo} alt="Logo" className="h-15  rounded-full " />
+          <span className="text-3xl font-bold text-pink-700 tracking-tight">
             Cake Fairy
           </span>
         </a>
@@ -116,7 +118,7 @@ function NavBar() {
               <a
                 href="#contact"
                 className="block text-lg text-gray-800 hover:text-pink-600 transition"
-                
+
               >
                 Contact
               </a>
