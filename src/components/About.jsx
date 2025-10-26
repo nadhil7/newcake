@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
     return (
-        <section className="bg-gradient-to-r from-pink-100 via-white to-pink-50 py-20">
+        <section className="bg-gradient-to-r from-pink-100 via-white to-pink-50 md:py-20 py-6">
             <div className="max-w-7xl mx-auto px-6 lg:px-16 flex flex-col lg:flex-row items-center gap-16">
                 
                 {/* Left Image Side */}
@@ -31,11 +31,11 @@ export default function About() {
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 1.3, ease: "easeOut" }}
                 >
-                    <span className="text-pink-600 uppercase tracking-widest text-sm font-semibold">
+                    <span className="text-pink-600 uppercase font-sans  tracking-widest text-sm font-semibold">
                         About Cake Shop
                     </span>
 
-                    <h2 className="text-5xl lg:text-6xl font-serif font-semibold italic text-gray-900 mt-5 leading-tight">
+                    <h2 className="text-5xl lg:text-6xl font-serif font-semibold italic text-gray-900 mt-3 leading-tight">
                         Cakes and bakes from the house of Queens!
                     </h2>
 
