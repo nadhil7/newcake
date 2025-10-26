@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
 import black from "../Pictures/black.jpeg";
 import white from "../Pictures/white.jpg";
+import cake from '../Pictures/cake.jpg'
 
 export default function Contact() {
 
   const cakeImages = [
     { image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80" },
     { image: black },
-    { image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" },
+    { image: cake },
     { image: white },
   ];
 

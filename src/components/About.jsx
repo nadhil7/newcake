@@ -40,7 +40,7 @@ export default function About() {
                     </h2>
 
                     <p className="text-gray-700 text-lg leading-relaxed mt-6 max-w-2xl mx-auto lg:mx-0">
-                        The <span className="font-semibold text-pink-700">"Cake Shop"</span> started as a small family bakery and grew into a
+                        The <span className="font-semibold text-pink-700">"Cake Fairy"</span> started as a small family bakery and grew into a
                         beloved brand known for its artistry and flavor. Founded by{" "}
                         <span className="font-medium text-gray-800">Dr. Iyad Sultan</span> and{" "}
                         <span className="font-medium text-gray-800">Dr. Sereen Sharabati</span>,
