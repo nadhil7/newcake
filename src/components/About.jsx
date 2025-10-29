@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import spiderman from '../Pictures/cakes/pic8.jpeg'
 
 export default function About() {
     return (
@@ -8,15 +9,14 @@ export default function About() {
                 {/* Left Image Side */}
                 <div className="flex-1 w-full">
                     <motion.div
-                        className="relative group rounded-3xl overflow-hidden shadow-2xl"
+                        className="relative group rounded-3xl overflow-hidden "
                         initial={{ opacity: 0, y: 50, scale: 0.95 }}
                         whileInView={{ opacity: 1, y: 0, scale: 1 }}
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 1.3, ease: "easeOut" }}
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=1000&q=80"
-                            alt="Delicious Cake"
+                            src={spiderman}
                             className="w-full h-[420px] lg:h-[500px] object-cover rounded-3xl"
                         />
                         <div className="absolute inset-0 bg-gradient-to-tr from-pink-300/10 to-transparent rounded-3xl transition-opacity group-hover:opacity-50"></div>
