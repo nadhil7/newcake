@@ -18,10 +18,10 @@ export default function App() {
       <HeroSection />
       {/* <CategoriesSlider /> */}
       <Shop />
-      <Marquee />
       <About />
+      <Marquee />
       {/* <Team /> */}
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Contact />
       <Footer />
     </div>

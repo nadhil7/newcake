@@ -40,13 +40,21 @@ function NavBar() {
       {/* </div> */}
 
       {/* Main Navigation */}
-      <div className="max-w-7xl mx-auto md:h-25 flex justify-between items-center px-6 py-4">
+      <div className="max-w-7xl mx-auto md:h-20 flex justify-between items-center px-6 py-4">
         {/* Logo */}
         <a href="./index.html" className="flex items-center space-x-2">
           <img src={orglogo} alt="Logo" className="h-15  rounded-full " />
           <span className="text-3xl font-bold font-serif ml-2 text-pink-700 tracking-tight">
             Cake Fairy
           </span>
+        </a>
+        <a
+          href="https://wa.me/9198952 53797"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-pink-600 text-white font-semibold hidden md:block px-8 py-3 rounded-full shadow hover:bg-pink-700 duration-200"
+        >
+          Order Now
         </a>
 
         {/* Desktop Nav */}
@@ -70,12 +78,12 @@ function NavBar() {
         </nav> */}
 
         {/* Mobile Menu Button */}
-        <button
+        {/* <button
           className="md:hidden text-3xl text-pink-600"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           <i className={`fa ${mobileMenuOpen ? "fa-times" : "fa-bars"}`}></i>
-        </button>
+        </button> */}
       </div>
 
       {/* Mobile Menu */}
