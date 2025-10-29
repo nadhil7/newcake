@@ -7,15 +7,17 @@ import Team from "./components/Team";
 import Testimonials from "./components/Testimonials";
 import Shop from "./components/Shop";
 import About from "./components/About";
+import HeroSection from "./components/HeroSection";
 
 export default function App() {
   return (
     <div className="font-sans bg-gradient-to-r from-pink-100 via-white to-pink-50 min-h-screen ">
       <NavBar />
       {/* <HeroSlider /> */}
-      <About />
+      <HeroSection />
       {/* <CategoriesSlider /> */}
       <Shop />
+      <About />
       {/* <Team /> */}
       <Testimonials />
       <Contact />

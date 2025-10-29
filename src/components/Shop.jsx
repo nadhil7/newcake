@@ -74,10 +74,10 @@ export default function Shop() {
           <h2 className="text-5xl font-extrabold text-pink-700 mb-4 tracking-tight">
             Classic Cakes
           </h2>
-          <p className="text-gray-500 mb-12 max-w-2xl mx-auto text-lg">
-            Indulge in our handcrafted selection of premium cakes — baked with love,
-            layered with delight, and frosted to perfection.
-          </p>
+          <p className="text-gray-500 mb-12 max-w-2xl mx-auto text-lg ">
+            Indulge in our handcrafted selection of premium cakes —
+            <span className='font-bold'>we love to design your valuable days</span> 
+            </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
             {cakes.map((cake) => (
