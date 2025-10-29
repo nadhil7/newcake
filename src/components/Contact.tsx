@@ -1,28 +1,29 @@
 import { motion } from "framer-motion";
 import black from "../Pictures/black.jpeg";
 import white from "../Pictures/white.jpg";
+import cake from '../Pictures/cake.jpg'
 
 export default function Contact() {
 
   const cakeImages = [
     { image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80" },
     { image: black },
-    { image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" },
+    { image: cake },
     { image: white },
   ];
 
   return (
-    <section id="contact" className="py-20 px-4 bg-gradient-to-b from-pink-50 via-white to-yellow-50">
+    <section id="contact" className="py-15 px-4 bg-gradient-to-b from-pink-50 via-white to-yellow-50">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
 
         {/* Left Side - Contact Form */}
         <div className="flex-1 w-full">
           <div className="text-center lg:text-left mb-8 lg:mb-0 lg:pl-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-pink-700 mb-4">
+            <h2 className="text-4xl md:text-5xl font-serif  font-bold text-pink-700 mb-4">
               Contact Us
             </h2>
             <p className="text-gray-600 mb-8 text-lg">
-              Reach out to us: <span className="font-medium text-pink-600">cakefairy1@gmail.com</span>
+              Reach out to us: <span className="font-mono text-pink-600 ">cakefairy1@gmail.com</span>
             </p>
           </div>
 

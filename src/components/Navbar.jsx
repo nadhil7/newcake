@@ -44,7 +44,7 @@ function NavBar() {
         {/* Logo */}
         <a href="./index.html" className="flex items-center space-x-2">
           <img src={orglogo} alt="Logo" className="h-15  rounded-full " />
-          <span className="text-3xl font-bold text-pink-700 tracking-tight">
+          <span className="text-3xl font-bold font-serif ml-2 text-pink-700 tracking-tight">
             Cake Fairy
           </span>
         </a>

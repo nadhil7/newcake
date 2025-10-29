@@ -14,7 +14,7 @@ const Footer = () => {
                     {/* Working Hours */}
                     <div className="flex-1 mb-8 md:mb-0">
                         <div>
-                            <h6 className="text-white font-semibold uppercase mb-5">WORKING HOURS</h6>
+                            <h6 className="text-white font-serif font-semibold uppercase mb-5">WORKING HOURS</h6>
                             <ul>
                                 <li className="text-sm text-[#a4a4a4] leading-9">Monday - Friday: 08:00 am – 08:30 pm</li>
                                 <li className="text-sm text-[#a4a4a4] leading-9">Saturday: 10:00 am – 16:30 pm</li>
@@ -71,7 +71,7 @@ const Footer = () => {
 
                     {/* Newsletter */}
                     <div className="flex-1 md:pl-8">
-                        <div>
+                        <div className='font-serif'>
                             <h6 className="text-white font-semibold uppercase mb-5">Subscribe</h6>
                             <p className="text-xl text-white leading-6 mb-6">Get latest updates and offers .</p>
                             <p className="text-xl text-[#a4a4a4] leading-6 mb-6"></p>
@@ -97,11 +97,7 @@ const Footer = () => {
             <div className="bg-black mt-10 py-4">
                 <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between px-4 items-center">
                     <p className="text-[#888888] text-sm mb-2 md:mb-0">
-                        &copy; {new Date().getFullYear()} All rights reserved | This template is made with{' '}
-                        <i className="fa fa-heart text-[#f08632] mx-1" aria-hidden="true" /> by{' '}
-                        <a href="https://colorlib.com" target="_blank" rel="noopener noreferrer" className="text-[#f08632]">
-                            Colorlib
-                        </a>
+                        &copy; {new Date().getFullYear()} All rights reserved
                     </p>
                     <div>
                         <ul className="flex justify-end text-[#888888] text-sm space-x-6">

@@ -71,7 +71,7 @@ export default function Shop() {
         className="bg-gradient-to-br from-pink-100 via-white to-pink-50 py-20 px-6"
       >
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-5xl font-extrabold text-pink-700 mb-4 tracking-tight">
+          <h2 className="text-5xl font-serif font-extrabold text-pink-700 mb-4 tracking-tight">
             Classic Cakes
           </h2>
           <p className="text-gray-500 mb-12 max-w-2xl mx-auto text-lg ">

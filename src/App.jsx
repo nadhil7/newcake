@@ -7,6 +7,7 @@ import Team from "./components/Team";
 import Testimonials from "./components/Testimonials";
 import Shop from "./components/Shop";
 import About from "./components/About";
+import Marquee from "./components/Marquee";
 import HeroSection from "./components/HeroSection";
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
       <HeroSection />
       {/* <CategoriesSlider /> */}
       <Shop />
+      <Marquee />
       <About />
       {/* <Team /> */}
       <Testimonials />
