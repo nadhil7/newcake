@@ -1,4 +1,4 @@
-// HeroSection.js
+
 import React from 'react';
 import honeybee from '../Pictures/cakes/honeeybeetheme_main.jpeg';
 import bunny from '../Pictures/cakes/pic7.jpeg';
