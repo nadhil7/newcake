@@ -57,9 +57,9 @@ export default function Shop() {
 
   const [showWhatsApp, setShowWhatsApp] = useState(false);
 
-  const handleOrderClick = (name, price) => {
+  const handleOrderClick = (name) => {
     const whatsappNumber = "919895253797";
-    const message = encodeURIComponent(`Hello, I would like to order the "${name}" (${price}).`);
+    const message = encodeURIComponent(`Hello, I would like to order the "${name}".`);
     const href = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${message}`;
     window.open(href, '_blank')
   };
@@ -83,13 +83,15 @@ export default function Shop() {
             {cakes.map((cake) => (
               <div
                 key={cake.title}
-                className="group relative bg-white rounded-3xl shadow-sm transition-all duration-300 overflow-hidden transform hover:-translate-y-2"
+                className="group relative bg-white rounded-3xl shadow-sm transition-transform duration-300 ease-out hover:-translate-y-2 will-change-transform overflow-hidden"
               >
                 <div className="overflow-hidden rounded-t-3xl">
                   <img
                     src={cake.image}
                     alt={cake.title}
-                    className="w-full h-40 md:h-56 object-cover transform group-hover:scale-110 transition duration-500"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-40 md:h-56 object-cover transform group-hover:scale-110 transition-transform duration-500 ease-out will-change-transform"
                   />
                 </div>
 
@@ -102,13 +104,10 @@ export default function Shop() {
                   </p>
 
                   <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 md:gap-0">
-                    <span className="text-primary-600 font-bold text-sm md:text-lg">
-                      ${cake.price}
-                    </span>
                     <button
                       className="hover:bg-primary-600 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm transition-all shadow-md hover:shadow-lg w-full md:w-auto text-center"
                       style={{ backgroundColor: '#6E473B' }}
-                      onClick={() => { handleOrderClick(cake.title, cake.price) }}
+                      onClick={() => { handleOrderClick(cake.title) }}
                     >
                       Order
                     </button>

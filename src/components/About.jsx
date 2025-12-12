@@ -35,7 +35,7 @@ export default function About() {
                         About Cake Shop
                     </span>
 
-                    <h2 className="text-5xl lg:text-6xl font-serif font-semibold italic text-gray-900 mt-3 leading-tight">
+                    <h2 className="text-3xl lg:text-4xl font-serif font-semibold italic text-gray-900 mt-3 leading-tight">
                         Cakes and bakes from the house of Queens!
                     </h2>
 
@@ -47,27 +47,7 @@ export default function About() {
                         we’ve been perfecting the art of baking to bring joy and warmth in every bite.
                     </p>
 
-                    {/* Skill Bars */}
-                    <div className="mt-12 space-y-8 max-w-xl mx-auto lg:mx-0">
-                        {[
-                            { label: "Cake Design", percent: 95 },
-                            { label: "Cake Classes", percent: 80 },
-                            { label: "Cake Recipes", percent: 90 },
-                        ].map((bar, i) => (
-                            <div key={i}>
-                                <div className="flex justify-between mb-1">
-                                    <span className="text-gray-800 font-semibold">{bar.label}</span>
-                                    <span className="text-primary-600 font-bold">{bar.percent}%</span>
-                                </div>
-                                <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
-                                    <div
-                                        className="bg-gradient-to-r from-primary-400 to-primary-600 h-3 rounded-full"
-                                        style={{ width: `${bar.percent}%` }}
-                                    />
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+
                 </motion.div>
             </div>
         </section>
