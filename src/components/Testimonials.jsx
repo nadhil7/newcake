@@ -16,7 +16,7 @@ export default function Testimonials() {
     return (
         <section id="testimonials" className="py-16 px-4 bg-pink-50">
             <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-3xl font-bold text-pink-700 mb-8">Our clients say</h2>
+                <h2 className="text-3xl font-serif font-semibold italic text-pink-700 mb-8">Our clients say</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {testimonials.map((t, idx) => (
                         <div key={idx} className="bg-white p-6 rounded-lg shadow transition hover:shadow-xl">

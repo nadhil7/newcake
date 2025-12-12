@@ -4,7 +4,7 @@ import spiderman from '../Pictures/cakes/pic8.jpeg'
 export default function About() {
     return (
         <section className="bg-gradient-to-r from-primary-100 via-white to-primary-50 md:py-20 py-6">
-            <div className="max-w-7xl mx-auto px-6 lg:px-16 flex flex-col lg:flex-row items-center gap-16">
+            <div className="max-w-7xl mx-auto px-6 lg:px-16 flex flex-col lg:flex-row items-start gap-16">
 
                 {/* Left Image Side */}
                 <div className="flex-1 w-full">

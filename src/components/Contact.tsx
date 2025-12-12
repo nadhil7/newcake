@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
 import black from "../Pictures/black.jpeg";
-import white from "../Pictures/white.jpg";
 import cake from '../Pictures/cake.jpg'
+import cakeVideo from '../Pictures/cakes/cake video1.mp4';
 import instagramIcon from '../assets/instagram.png';
 
 export default function Contact() {
 
   const cakeImages = [
-    { image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80" },
-    { image: black },
-    { image: cake },
-    { image: white },
+    { type: 'image', src: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80" },
+    { type: 'image', src: black },
+    { type: 'image', src: cake },
+    { type: 'video', src: cakeVideo },
   ];
 
   return (
@@ -19,8 +19,8 @@ export default function Contact() {
 
         {/* Left Side - Contact Form */}
         <div className="flex-1 w-full">
-          <div className="text-center lg:text-left mb-8 lg:mb-0 lg:pl-20">
-            <h2 className="text-4xl md:text-5xl font-serif  font-bold text-primary-700 mb-4">
+          <div className="text-center lg:text-left mb-8 lg:mb-0">
+            <h2 className="text-4xl md:text-5xl font-serif italic font-semibold text-primary-700 mb-4">
               Contact Us
             </h2>
             <p className="text-gray-600 mb-8 text-lg">
@@ -76,20 +76,31 @@ export default function Contact() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          {cakeImages.map((img, idx) => (
+          {cakeImages.map((item, idx) => (
             <motion.div
               key={idx}
               className="relative rounded-3xl overflow-hidden shadow-2xl group"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.2 }}
             >
-              <img
-                src={img.image}
-                alt={`Cake ${idx + 1}`}
-                loading="lazy"
-                decoding="async"
-                className="w-full h-48 md:h-60 object-cover"
-              />
+              {item.type === 'video' ? (
+                <video
+                  src={item.src}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-48 md:h-60 object-cover"
+                />
+              ) : (
+                <img
+                  src={item.src}
+                  alt={`Cake ${idx + 1}`}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-48 md:h-60 object-cover"
+                />
+              )}
               <div className="absolute inset-0 bg-gradient-to-t from-primary-200/20 to-transparent opacity-0 group-hover:opacity-50 transition-opacity rounded-3xl"></div>
             </motion.div>
           ))}

@@ -3,7 +3,7 @@ export default
     return (
         <section id="team" className="py-16 px-4 bg-white">
             <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl font-bold text-pink-700 text-center mb-2">
+                <h2 className="text-3xl font-serif font-semibold italic text-pink-700 text-center mb-2">
                     Our Team
                 </h2>
                 <p className="text-center text-gray-600 mb-8">

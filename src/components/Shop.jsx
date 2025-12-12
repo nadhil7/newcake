@@ -70,13 +70,14 @@ export default function Shop() {
         id="shop"
         className="bg-gradient-to-br from-primary-100 via-white to-primary-50 py-20 px-6"
       >
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-5xl font-serif font-extrabold text-primary-700 mb-4 tracking-tight">
+        <div className="max-w-7xl mx-auto text-center md:text-left">
+          <h2 className="text-5xl font-serif font-semibold italic text-primary-700 mb-4 tracking-tight">
             Classic Cakes
           </h2>
-          <p className="text-gray-500 mb-12 max-w-2xl mx-auto text-lg ">
+          <p className="text-gray-500 mb-12 max-w-2xl mx-auto md:mx-0 text-lg ">
             Indulge in our handcrafted selection of premium cakes —
-            <span className='font-bold'>we love to design your valuable days</span>
+            <span className='font-bold block md:inline'> we love to design your valuable days.</span>
+            <span className="hidden md:inline font-serif italic text-primary-600 block mt-2"> Created with passion, baked with perfection, and served with a sprinkle of magic just for you.</span>
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-10">
