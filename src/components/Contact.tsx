@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import black from "../Pictures/black.jpeg";
 import white from "../Pictures/white.jpg";
 import cake from '../Pictures/cake.jpg'
+import instagramIcon from '../assets/instagram.png';
 
 export default function Contact() {
 
@@ -25,37 +26,46 @@ export default function Contact() {
             <p className="text-gray-600 mb-8 text-lg">
               Reach out to us: <span className="font-mono text-primary-600 ">cakefairy1@gmail.com</span>
             </p>
+
+            <div className="flex gap-6 mb-8">
+              <a
+                href="https://wa.me/919895253797"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transform hover:scale-110 transition duration-300"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                  alt="WhatsApp"
+                  className="w-10 h-10"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/cake__fairy1?igsh=MXI2bXI4cmJ3ejd4eQ=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transform hover:scale-110 transition duration-300"
+              >
+                <img
+                  src={instagramIcon}
+                  alt="Instagram"
+                  className="w-10 h-10"
+                />
+              </a>
+            </div>
           </div>
 
-          <form className="max-w-md mx-auto flex flex-col gap-6">
-            <input
-              type="text"
-              name="user_name"
-              placeholder="Name"
-              required
-              className="border border-gray-300 rounded-xl p-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition"
-            />
-            <input
-              type="text"
-              name="user_phone"
-              placeholder="Phone"
-              required
-              className="border border-gray-300 rounded-xl p-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition"
-            />
-            <textarea
-              name="message"
-              placeholder="Type your requirements"
-              required
-              className="border border-gray-300 rounded-xl p-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition resize-none h-32"
-            />
-            <button
-              type="submit"
-              className="mt-2 py-3 px-8 text-white rounded-xl font-semibold shadow-lg hover:scale-105 transform transition"
-              style={{ background: 'linear-gradient(to right, #6E473B, #462E25)' }}
-            >
-              Submit
-            </button>
-          </form>
+          <div className="rounded-xl overflow-hidden shadow-lg mt-8">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d251500.6879302732!2d75.95672607421876!3d9.959044422228864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b086d000b7c0ff5%3A0x53ea297ddf380622!2sCake%20Fairy!5e0!3m2!1sen!2sin!4v1765545525647!5m2!1sen!2sin"
+              width="100%"
+              height="300"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
 
         {/* Right Side - Cake Images Grid */}
