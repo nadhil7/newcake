@@ -12,7 +12,7 @@ import HeroSection from "./components/HeroSection";
 
 export default function App() {
   return (
-    <div className="font-sans bg-gradient-to-r from-pink-100 via-white to-pink-50 min-h-screen ">
+    <div className="font-sans min-h-screen">
       <NavBar />
       {/* <HeroSlider /> */}
       <HeroSection />

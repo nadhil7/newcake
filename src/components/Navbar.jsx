@@ -1,13 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 import logo from "../Pictures/logo.jpg";
 import sitelog from '../assets/newcakelogo.jpg'
 import orglogo from '../assets/orglogo.jpeg'
 
 function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show navbar only when user scrolls down more than 100px
+      if (window.scrollY > 100) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial position
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="bg-gradient-to-r from-pink-100 via-white to-orange-100 shadow-lg sticky top-0 z-50">
+    <header
+      className={`fixed top-0 w-full z-50 transition-transform duration-300 ease-in-out bg-gradient-to-r from-primary-100 via-white to-secondary-100 shadow-lg py-2 ${isVisible ? 'translate-y-0' : '-translate-y-full'
+        }`}
+    >
       {/* Top Bar */}
       {/* <div className="border-b border-pink-200 py-2 hidden md:block"> */}
       {/* <div className="max-w-7xl mx-auto flex justify-between items-center px-6 text-sm text-gray-600">
@@ -44,7 +64,7 @@ function NavBar() {
         {/* Logo */}
         <a href="./index.html" className="flex items-center space-x-2">
           <img src={orglogo} alt="Logo" className="h-15  rounded-full " />
-          <span className="text-2xl md:text-3xl font-bold font-serif ml-2 text-pink-700 tracking-tight">
+          <span className="text-2xl md:text-3xl font-bold font-serif ml-2 text-primary-700 tracking-tight">
             Cake Fairy
           </span>
         </a>
@@ -52,7 +72,8 @@ function NavBar() {
           href="https://wa.me/9198952 53797"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-pink-600 text-white font-semibold hidden md:block px-8 py-3 rounded-full shadow hover:bg-pink-700 duration-200"
+          className="text-white font-semibold hidden md:block px-8 py-3 rounded-full shadow hover:bg-primary-700 duration-200"
+          style={{ backgroundColor: '#6E473B' }}
         >
           Order Now
         </a>
@@ -78,12 +99,12 @@ function NavBar() {
         </nav> */}
 
         {/* Mobile Menu Button */}
-        {/* <button
-          className="md:hidden text-3xl text-pink-600"
+        <button
+          className="md:hidden text-3xl text-pink-600 focus:outline-none"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
-          <i className={`fa ${mobileMenuOpen ? "fa-times" : "fa-bars"}`}></i>
-        </button> */}
+          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </div>
 
       {/* Mobile Menu */}
@@ -91,20 +112,20 @@ function NavBar() {
         <nav className="md:hidden bg-white text-center py-4 font-bold shadow-lg border-t border-pink-100 animate-slideDown">
           <ul className="space-y-4">
             <li>
-              <p
+              <a
                 href="./index.html"
                 className="block text-lg text-gray-800 hover:text-pink-600 transition"
               >
                 Home
-              </p>
+              </a>
             </li>
             <li>
-              <p
+              <a
                 href="./about.html"
                 className="block text-lg text-gray-800 hover:text-pink-600 transition"
               >
                 About
-              </p>
+              </a>
             </li>
             {/* <li>
               <a

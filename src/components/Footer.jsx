@@ -6,13 +6,13 @@ import instagramIcon from '../assets/instagram.png'
 const Footer = () => {
     return (
         <footer
-            className="w-full bg-cover bg-center pt-16"
+            className="w-full bg-cover bg-center pt-8 md:pt-16"
             style={{ backgroundImage: `url(${blackfooter})` }}
         >
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex flex-col md:flex-row md:divide-x md:divide-white/10 gap-8 md:gap-0">
                     {/* Working Hours */}
-                    <div className="flex-1 mb-8 md:mb-0">
+                    <div className="flex-1 mb-6 md:mb-0">
                         <div>
                             <h6 className="text-white font-serif font-semibold uppercase mb-5">WORKING HOURS</h6>
                             <ul>
@@ -23,7 +23,7 @@ const Footer = () => {
                         </div>
                     </div>
                     {/* About */}
-                    <div className="flex-1 flex flex-col items-center text-center mb-8 md:mb-0 md:pl-8 md:pr-8">
+                    <div className="flex-1 flex flex-col items-center text-center mb-6 md:mb-0 md:pl-8 md:pr-8">
                         <div className="mb-8">
                             <a href="/">
                                 <img
@@ -94,7 +94,7 @@ const Footer = () => {
                 </div>
             </div>
             {/* Copyright Section */}
-            <div className="bg-black mt-10 py-4">
+            <div className="bg-black mt-6 md:mt-10 py-4">
                 <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between px-4 items-center">
                     <p className="text-[#888888] text-sm mb-2 md:mb-0">
                         &copy; {new Date().getFullYear()} All rights reserved

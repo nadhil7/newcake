@@ -41,14 +41,15 @@ function CakeCard({ cake }) {
                 className="w-full h-48 object-cover"
             />
             <div className="p-4">
-                <h3 className="text-xl font-semibold text-pink-600">{cake.name}</h3>
+                <h3 className="text-xl font-semibold text-primary-600">{cake.name}</h3>
                 <p className="text-gray-600 mt-2">{cake.description}</p>
-                <p className="text-pink-500 font-bold mt-4">{cake.price}</p>
+                <p className="text-primary-500 font-bold mt-4">{cake.price}</p>
                 <a
                     href={`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${message}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-full text-sm transition-all shadow-md hover:shadow-lg"
+                    className="text-white px-4 py-2 rounded-full text-sm transition-all shadow-md hover:shadow-lg"
+                    style={{ backgroundColor: '#6E473B' }}
                 >
                     Order Now
                 </a>

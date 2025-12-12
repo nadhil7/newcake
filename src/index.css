@@ -1,9 +1,72 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS Color Variables - Brown/Beige Palette */
+:root {
+  /* Primary Color Palette (Brown tones) */
+  --color-primary-50: #f5f3f0;
+  --color-primary-100: #E1D4C2;
+  --color-primary-200: #BEB5A9;
+  --color-primary-300: #A78D78;
+  --color-primary-400: #8B7563;
+  --color-primary-500: #6E473B;
+  --color-primary-600: #5A3A2F;
+  --color-primary-700: #462E25;
+  --color-primary-800: #33221B;
+  --color-primary-900: #291C0E;
+
+}
+
+/* Dotted background pattern */
+body {
+  background-color: white;
+  background-image: radial-gradient(circle at center, rgba(41, 28, 14, 0.15) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-repeat: repeat;
+}
+
+/* Navbar animations */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.navbar-visible {
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+.navbar-hidden {
+  animation: slideUp 0.3s ease-out forwards;
+}
+
+/* Marquee animations */
 @keyframes marquee {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -14,6 +77,7 @@
   width: 200%;
   animation: marquee 20s linear infinite;
 }
+
 .marquee-content {
   display: flex;
   width: 50%;

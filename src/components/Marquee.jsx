@@ -12,7 +12,7 @@ function Marquee() {
 
   return (
     <div
-      className="relative overflow-hidden py-6 border-y border-pink-200 shadow-sm"
+      className="relative overflow-hidden py-6 border-y border-primary-200 shadow-sm"
       style={{
         backgroundImage: `url(${bgimg})`,
         backgroundSize: 'cover',
@@ -31,7 +31,7 @@ function Marquee() {
         {[...items, ...items].map((text, index) => (
           <span
             key={index}
-            className="text-pink-600 font-semibold py-2 font-serif text-2xl mx-10 tracking-wide drop-shadow-sm hover:text-pink-700 transition-colors duration-300"
+            className="text-primary-600 font-semibold py-2 font-serif text-2xl mx-10 tracking-wide drop-shadow-sm hover:text-primary-700 transition-colors duration-300"
           >
             {text}
           </span>

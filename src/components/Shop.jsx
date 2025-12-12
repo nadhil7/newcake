@@ -61,25 +61,25 @@ export default function Shop() {
     const whatsappNumber = "919895253797";
     const message = encodeURIComponent(`Hello, I would like to order the "${name}" (${price}).`);
     const href = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${message}`;
-    window.open(href,'_blank')
+    window.open(href, '_blank')
   };
 
   return (
     <>
       <section
         id="shop"
-        className="bg-gradient-to-br from-pink-100 via-white to-pink-50 py-20 px-6"
+        className="bg-gradient-to-br from-primary-100 via-white to-primary-50 py-20 px-6"
       >
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-5xl font-serif font-extrabold text-pink-700 mb-4 tracking-tight">
+          <h2 className="text-5xl font-serif font-extrabold text-primary-700 mb-4 tracking-tight">
             Classic Cakes
           </h2>
           <p className="text-gray-500 mb-12 max-w-2xl mx-auto text-lg ">
             Indulge in our handcrafted selection of premium cakes —
-            <span className='font-bold'>we love to design your valuable days</span> 
-            </p>
+            <span className='font-bold'>we love to design your valuable days</span>
+          </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-10">
             {cakes.map((cake) => (
               <div
                 key={cake.title}
@@ -89,24 +89,25 @@ export default function Shop() {
                   <img
                     src={cake.image}
                     alt={cake.title}
-                    className="w-full h-56 object-cover transform group-hover:scale-110 transition duration-500"
+                    className="w-full h-40 md:h-56 object-cover transform group-hover:scale-110 transition duration-500"
                   />
                 </div>
 
-                <div className="p-6 text-left">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-pink-700 transition">
+                <div className="p-3 md:p-6 text-left">
+                  <h3 className="text-sm md:text-xl font-semibold text-gray-800 mb-1 md:mb-2 group-hover:text-primary-700 transition line-clamp-1">
                     {cake.title}
                   </h3>
-                  <p className="text-gray-500 mb-4 text-md">
+                  <p className="text-gray-500 mb-2 md:mb-4 text-xs md:text-md line-clamp-2">
                     {cake.description}
                   </p>
 
-                  <div className="flex justify-between items-center">
-                    <span className="text-pink-600 font-bold text-lg">
+                  <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 md:gap-0">
+                    <span className="text-primary-600 font-bold text-sm md:text-lg">
                       ${cake.price}
                     </span>
                     <button
-                      className="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-full text-sm transition-all shadow-md hover:shadow-lg"
+                      className="hover:bg-primary-600 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm transition-all shadow-md hover:shadow-lg w-full md:w-auto text-center"
+                      style={{ backgroundColor: '#6E473B' }}
                       onClick={() => { handleOrderClick(cake.title, cake.price) }}
                     >
                       Order

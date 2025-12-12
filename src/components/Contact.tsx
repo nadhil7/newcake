@@ -50,7 +50,8 @@ export default function Contact() {
             />
             <button
               type="submit"
-              className="mt-2 py-3 px-8 bg-gradient-to-r from-pink-500 to-pink-700 text-white rounded-xl font-semibold shadow-lg hover:scale-105 transform transition"
+              className="mt-2 py-3 px-8 text-white rounded-xl font-semibold shadow-lg hover:scale-105 transform transition"
+              style={{ background: 'linear-gradient(to right, #6E473B, #462E25)' }}
             >
               Submit
             </button>

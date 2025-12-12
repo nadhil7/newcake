@@ -1,37 +1,64 @@
 
 import React from 'react';
-import honeybee from '../Pictures/cakes/honeeybeetheme_main.jpeg';
-import bunny from '../Pictures/cakes/pic7.jpeg';
-import bride from '../Pictures/cakes/bridetobe.jpeg';
+import { motion } from 'framer-motion';
+import heroBackground from '../Pictures/bakcgrounds/new background cake.jpg';
 
 export default function HeroSection() {
     return (
-        <section className="hidden md:block bg-pink-100 py-12 px-4 md:px-16 lg:px-32">
-            <div className="flex flex-col items-center justify-center text-center ">
-                {/* Floral and Cake Banner */}
-                <div className="w-full flex flex-col md:flex-row gap-8 items-center justify-center mb-6">
-                    {/* Replace these src attributes with your actual cake/product images */}
-                    <img src={honeybee} alt="Custom Cake" className="w-36 h-36 rounded-full object-cover shadow-lg" />
-                    <img src={bunny} alt="Macarons" className="w-36 h-36 rounded-full object-cover shadow-lg" />
-                    <img src={bride} alt="Cupcake" className="w-36 h-36 rounded-full object-cover shadow-lg" />
+        <section className="relative min-h-screen flex items-end justify-start overflow-hidden pb-8">
+            <img
+                src={heroBackground}
+                alt="Bakery background"
+                className="absolute inset-0 w-full h-full object-cover z-0 brightness-105 saturate-110"
+                style={{
+                    objectFit: 'cover',
+                    objectPosition: 'center',
+                    imageRendering: 'high-quality'
+                }}
+            />
+
+            {/* Light gradient overlay: White on the left for text readability, clear on the right for the image */}
+            <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/40 to-transparent z-0"></div>
+
+            <div className="relative z-10 w-full px-8 md:px-12 lg:px-16 mb-10">
+                <div className="max-w-2xl">
+                    {/* Main Heading with elegant font */}
+                    <motion.h1
+                        className="font-serif text-6xl md:text-7xl lg:text-8xl text-primary-900 mb-8 tracking-wide text-left"
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1, ease: "easeOut" }}
+                        style={{ fontFamily: "'Playfair Display', 'Georgia', serif" }}
+                    >
+                        Bakery
+                    </motion.h1>
+
+                    {/* Hero Description */}
+                    <motion.p
+                        className="text-lg md:text-xl text-primary-700 mb-12 leading-relaxed text-left"
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.3, duration: 0.8 }}
+                    >
+                        Handcrafted with love, baked to perfection. Discover our exquisite collection of artisan cakes and pastries.
+                    </motion.p>
+
+                    {/* CTA Button */}
+                    <motion.a
+                        href="#shop"
+                        className="inline-block text-white font-semibold px-10 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 uppercase tracking-wider text-sm"
+                        style={{ backgroundColor: '#6E473B' }}
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.5, duration: 0.8 }}
+                    >
+                        Shop Now
+                    </motion.a>
                 </div>
-                {/* Heading & Description */}
-                <h1 className="text-4xl md:text-5xl font-serif mb-4 text-pink-900">
-                    Delight in Every Bite!
-                </h1>
-                <p className="text-base md:text-lg text-pink-700 mb-6 max-w-2xl">
-                    Celebrate every occasion with custom cakes, delicious puddings, and irresistible cupcakes. Crafted with love & premium ingredients.
-                </p>
-                {/* CTA Button */}
-                <a
-                    href="https://wa.me/9198952 53797"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-pink-600 text-white font-semibold px-8 py-3 rounded-full shadow hover:bg-pink-700 duration-200"
-                >
-                    Order Now
-                </a>
             </div>
+
+            {/* Decorative elements */}
+            <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent z-5"></div>
         </section>
     );
 }
