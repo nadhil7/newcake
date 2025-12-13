@@ -20,7 +20,7 @@ function Marquee() {
 
   return (
     <div
-      className="relative overflow-hidden py-8 border-y border-primary-200 shadow-sm"
+      className="relative overflow-hidden py-8"
       style={{
         backgroundColor: '#6E473B',
       }}
