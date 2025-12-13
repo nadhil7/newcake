@@ -23,7 +23,7 @@ function NavBar() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-transform duration-300 ease-in-out bg-white/70 backdrop-blur-md shadow-lg py-1 ${isVisible ? 'translate-y-0' : '-translate-y-full'
+      className={`fixed top-0 w-full z-50 transition-transform duration-300 ease-in-out bg-white/60 backdrop-blur-md py-1 rounded-b-3xl ${isVisible ? 'translate-y-0' : '-translate-y-full'
         }`}
     >
       {/* Main Navigation */}
@@ -39,7 +39,7 @@ function NavBar() {
           href="https://wa.me/9198952 53797"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white font-semibold hidden md:block px-6 py-2 rounded-full shadow hover:bg-primary-700 duration-200 text-sm"
+          className="text-white font-semibold hidden md:block px-6 py-2 rounded-md shadow hover:bg-primary-700 duration-200 text-sm"
           style={{ backgroundColor: '#6E473B' }}
         >
           Order Now

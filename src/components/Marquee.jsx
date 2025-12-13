@@ -27,6 +27,12 @@ function Marquee() {
     >
 
 
+      {/* Left Gradient */}
+      <div className="absolute top-0 left-0 z-30 h-full w-16 bg-gradient-to-r from-[#6E473B] to-transparent pointer-events-none" />
+
+      {/* Right Gradient */}
+      <div className="absolute top-0 right-0 z-30 h-full w-16 bg-gradient-to-l from-[#6E473B] to-transparent pointer-events-none" />
+
       <div className="relative flex animate-marquee whitespace-nowrap z-20 items-center">
         {[...images, ...images].map((img, index) => (
           <div key={index} className="mx-4 md:mx-6 shrink-0">

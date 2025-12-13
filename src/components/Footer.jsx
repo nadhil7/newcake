@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-2">
                 <div className="flex flex-col md:flex-row md:divide-x md:divide-white/10 gap-6 md:gap-0">
                     {/* Working Hours */}
-                    <div className="flex-1 mb-4 md:mb-0 text-center md:text-left md:pl-20">
+                    <div className="flex-1 mb-4 md:mb-0 text-center md:text-left">
                         <div>
                             <h6 className="text-white font-serif font-semibold italic uppercase mb-3 md:mb-5">WORKING HOURS</h6>
                             <ul>

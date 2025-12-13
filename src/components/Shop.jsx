@@ -84,7 +84,7 @@ export default function Shop() {
             {cakes.map((cake) => (
               <div
                 key={cake.title}
-                className="group relative bg-white rounded-3xl shadow-sm transition-transform duration-300 ease-out hover:-translate-y-2 will-change-transform overflow-hidden"
+                className="group relative bg-white rounded-3xl shadow-sm transition-transform duration-300 ease-out will-change-transform overflow-hidden"
               >
                 <div className="overflow-hidden rounded-t-3xl">
                   <img
@@ -106,7 +106,7 @@ export default function Shop() {
 
                   <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 md:gap-0">
                     <button
-                      className="hover:bg-primary-600 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm transition-all shadow-md hover:shadow-lg w-full md:w-auto text-center"
+                      className="hover:bg-primary-600 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-md text-xs md:text-sm transition-all shadow-md hover:shadow-lg w-full md:w-auto text-center"
                       style={{ backgroundColor: '#6E473B' }}
                       onClick={() => { handleOrderClick(cake.title) }}
                     >

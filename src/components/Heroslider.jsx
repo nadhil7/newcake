@@ -51,7 +51,7 @@ function HeroSlider() {
                                         </h2>
                                         <a
                                             href="#"
-                                            className={`inline-block mt-3 primary-btn relative transition-all duration-500 px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white rounded font-semibold ${active === idx ? "top-0 opacity-100" : "top-24 opacity-0"
+                                            className={`inline-block mt-3 primary-btn relative transition-all duration-500 px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white rounded-md font-semibold ${active === idx ? "top-0 opacity-100" : "top-24 opacity-0"
                                                 }`}
                                         >
                                             {slide.button}
@@ -67,14 +67,14 @@ function HeroSlider() {
                 <button
                     onClick={handlePrev}
                     aria-label="Previous Slide"
-                    className="absolute left-7 top-1/2 -translate-y-1/2 h-12 w-12 bg-black/50 rounded-full text-white text-2xl flex items-center justify-center z-10 transition hover:bg-black"
+                    className="absolute left-7 top-1/2 -translate-y-1/2 h-12 w-12 bg-black/50 rounded-lg text-white text-2xl flex items-center justify-center z-10 transition hover:bg-black"
                 >
                     &#8592;
                 </button>
                 <button
                     onClick={handleNext}
                     aria-label="Next Slide"
-                    className="absolute right-7 top-1/2 -translate-y-1/2 h-12 w-12 bg-black/50 rounded-full text-white text-2xl flex items-center justify-center z-10 transition hover:bg-black"
+                    className="absolute right-7 top-1/2 -translate-y-1/2 h-12 w-12 bg-black/50 rounded-lg text-white text-2xl flex items-center justify-center z-10 transition hover:bg-black"
                 >
                     &#8594;
                 </button>
