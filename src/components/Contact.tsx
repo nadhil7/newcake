@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import black from "../Pictures/black.jpeg";
-import cake from '../Pictures/cake.jpg'
+import black from "../Pictures/cakes/pic8.jpeg";
+import cake from '../Pictures/cakes/pic9.jpeg'
 import cakeVideo from '../Pictures/cakes/cake video1.mp4';
 import instagramIcon from '../assets/instagram.png';
 

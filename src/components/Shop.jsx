@@ -1,57 +1,71 @@
-import white from '../Pictures/white.jpg';
-import black from '../Pictures/buter.jpg';
-import stawberry from '../Pictures/stawberry.jpg';
-import choclate from '../Pictures/black.jpeg';
-import caramel from '../Pictures/butterscotch.jpeg';
+import anniversary from '../Pictures/programs based/Anivessary cake.jpeg';
+import birthday from '../Pictures/programs based/Birthday cake.jpeg';
+import brideToBe from '../Pictures/programs based/Bride tobe cake.jpeg';
+import engagement from '../Pictures/programs based/Engagement Cake.jpeg';
+import groomToBe from '../Pictures/programs based/Groom tobe Cake.jpeg';
+import plane from '../Pictures/programs based/Plane cake.jpeg';
+import pregnancy from '../Pictures/programs based/Pregnency cake.jpeg';
+import holyCommunion from '../Pictures/programs based/holy communion.jpeg';
 import { useState } from 'react';
 
 
 export default function Shop() {
   const cakes = [
     {
-      title: "Dozen Cupcakes",
-      price: "32.00",
-      image: white,
+      title: "Anniversary Special",
+      price: "60.00",
+      image: anniversary,
       description:
-        "A perfect dozen of soft, fluffy cupcakes topped with creamy frosting — ideal for any celebration or sweet craving.",
+        "Celebrate your love and milestones with this elegant anniversary cake, crafted to perfection.",
     },
     {
-      title: "Cookies and Cream",
-      price: "30.00",
-      image:
-        caramel,
+      title: "Birthday Bash",
+      price: "45.00",
+      image: birthday,
       description:
-        "Rich layers of chocolate and vanilla cream blended with crushed cookies for that irresistible crunch.",
+        "Make your birthday extra special with our delicious, custom-designed birthday cakes.",
     },
     {
-      title: "Gluten Free Mini Dozen",
-      price: "31.00",
-      image: black,
+      title: "Bride to Be",
+      price: "55.00",
+      image: brideToBe,
       description:
-        "Moist and flavorful gluten-free mini cupcakes — baked with love and topped with silky buttercream.",
+        "A stunning cake for the bride-to-be, adding sweetness and style to her pre-wedding celebrations.",
     },
     {
-      title: "Cookie Dough",
-      price: "25.00",
-      image:
-        "https://images.unsplash.com/photo-1447078806655-40579c2520d6?auto=format&fit=crop&w=600&q=60",
+      title: "Engagement Delight",
+      price: "65.00",
+      image: engagement,
       description:
-        "Soft vanilla cake layered with edible cookie dough and chocolate chunks — the ultimate comfort dessert.",
+        "Mark the beginning of your forever with a beautiful engagement cake that tastes as good as it looks.",
     },
     {
-      title: "Vanilla Salted Caramel",
-      price: "5.00",
-      image: stawberry,
+      title: "Groom to Be",
+      price: "55.00",
+      image: groomToBe,
       description:
-        "A creamy vanilla base drizzled with golden salted caramel — sweet, salty, and simply irresistible.",
+        "Celebrate the groom-to-be with a classic and stylish cake designed just for him.",
     },
     {
-      title: "German Chocolate",
-      price: "14.00",
-      image:
-        choclate,
+      title: "Little Pilot",
+      price: "48.00",
+      image: plane,
       description:
-        "Classic German chocolate cake layered with coconut-pecan frosting — rich, nutty, and indulgent.",
+        "Take flight with this adorable plane-themed cake, perfect for little aviators and adventure lovers.",
+    },
+    {
+      title: "Baby Shower",
+      price: "58.00",
+      image: pregnancy,
+      description:
+        "Welcome the new arrival with a beautiful and heartwarming baby shower cake.",
+    },
+    {
+      title: "Holy Communion",
+      price: "52.00",
+      image: holyCommunion,
+      description:
+        "A pure and elegant cake to celebrate the sacred occasion of Holy Communion.",
     },
   ];
 
@@ -76,11 +90,11 @@ export default function Shop() {
           </h2>
           <p className="text-gray-500 mb-12 max-w-2xl mx-auto md:mx-0 text-lg ">
             Indulge in our handcrafted selection of premium cakes —
-            <span className='font-bold block md:inline'> we love to design your valuable days.</span>
-            <span className="hidden md:inline font-serif italic text-primary-600 block mt-2"> Created with passion, baked with perfection, and served with a sprinkle of magic just for you.</span>
+            <span className='block md:inline'> we love to design your valuable days.</span>
+            <span className="hidden md:inline text-primary-600 block mt-2"> Created with passion, baked with perfection, and served with a sprinkle of magic just for you.</span>
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-10">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-10">
             {cakes.map((cake) => (
               <div
                 key={cake.title}
