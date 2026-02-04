@@ -14,14 +14,10 @@ export default function App() {
   return (
     <div className="font-sans min-h-screen">
       <NavBar />
-      {/* <HeroSlider /> */}
       <HeroSection />
-      {/* <CategoriesSlider /> */}
       <Shop />
       <About />
       <Marquee />
-      {/* <Team /> */}
-      {/* <Testimonials /> */}
       <Contact />
       <Footer />
     </div>

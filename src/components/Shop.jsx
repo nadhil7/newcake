@@ -47,7 +47,7 @@ export default function Shop() {
         "Celebrate the groom-to-be with a classic and stylish cake designed just for him.",
     },
     {
-      title: "Little Pilot",
+      title: "Custom Cake",
       price: "48.00",
       image: plane,
       description:
