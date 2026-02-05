@@ -23,12 +23,12 @@ function NavBar() {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ease-in-out ${isScrolled
-          ? 'bg-white/80 backdrop-blur-md shadow-sm py-2'
-          : 'bg-transparent py-4'
+        ? 'bg-white/80 backdrop-blur-md shadow-sm py-2'
+        : 'bg-transparent py-4'
         }`}
     >
       {/* Main Navigation */}
-      <div className="max-w-7xl mx-auto md:h-16 flex justify-between items-center px-6">
+      <div className="max-w-7xl mx-auto md:h-16 flex justify-between items-center px-4 md:px-6">
         {/* Logo */}
         <a href="./index.html" className="flex items-center space-x-2">
           <img src={orglogo} alt="Logo" className="h-10 rounded-full" />
@@ -57,30 +57,36 @@ function NavBar() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <nav className="md:hidden bg-white text-center py-4 font-bold shadow-lg border-t border-pink-100 animate-slideDown">
-          <ul className="space-y-4">
+        <nav className="md:hidden bg-white/95 backdrop-blur-md border-t border-primary-100 animate-slideDown pb-8 pt-4 absolute w-full left-0 shadow-xl">
+          <ul className="flex flex-col items-center space-y-6">
             <li>
               <a
                 href="./index.html"
-                className="block text-lg text-gray-800 hover:text-primary-600 transition"
+                className="text-lg font-serif text-primary-800 hover:text-primary-600 transition-colors duration-200"
+                onClick={() => setMobileMenuOpen(false)}
               >
                 Home
               </a>
             </li>
             <li>
               <a
-                href="./about.html"
-                className="block text-lg text-gray-800 hover:text-primary-600 transition"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
                 href="#contact"
-                className="block text-lg text-gray-800 hover:text-primary-600 transition"
+                className="text-lg font-serif text-primary-800 hover:text-primary-600 transition-colors duration-200"
+                onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
+              </a>
+            </li>
+            <li className="pt-2">
+              <a
+                href="https://wa.me/919895253797"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-2.5 rounded-full text-white font-medium shadow-md hover:bg-primary-700 hover:shadow-lg transition-all duration-300 text-sm"
+                style={{ backgroundColor: '#6E473B' }}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Order Now
               </a>
             </li>
           </ul>
