@@ -94,7 +94,7 @@ export default function Shop() {
             <span className="hidden md:inline text-primary-600 block mt-2"> Created with passion, baked with perfection, and served with a sprinkle of magic just for you.</span>
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-10">
             {cakes.map((cake) => (
               <div
                 key={cake.title}
