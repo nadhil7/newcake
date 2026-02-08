@@ -17,43 +17,49 @@ export default function HeroSection() {
                 }}
             />
 
-            {/* Light gradient overlay: White on the left for text readability, clear on the right for the image */}
-            <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/40 to-transparent z-0"></div>
+
 
             <div className="relative z-10 w-full px-8 md:px-12 lg:px-16 mb-10">
                 <div className="max-w-2xl">
-                    {/* Main Heading with elegant font */}
-                    <motion.h1
-                        className="font-serif italic font-semibold text-5xl md:text-7xl lg:text-8xl text-primary-900 mb-8 tracking-wide text-left"
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 1, ease: "easeOut" }}
-                        style={{ fontFamily: "'Playfair Display', 'Georgia', serif" }}
-                    >
-                        Bakery
-                    </motion.h1>
+                    <div className="backdrop-blur-md bg-white/30 p-8 rounded-3xl border border-white/40 shadow-xl">
+                        {/* Main Heading with elegant font */}
+                        <motion.h1
+                            className="font-serif italic font-semibold text-5xl md:text-7xl lg:text-8xl text-gray-900 mb-8 tracking-wide text-left"
+                            initial={{ opacity: 0, x: -50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 1, ease: "easeOut" }}
+                            style={{ fontFamily: "'Playfair Display', 'Georgia', serif" }}
+                        >
+                            Bakery
+                        </motion.h1>
 
-                    {/* Hero Description */}
-                    <motion.p
-                        className="text-lg md:text-xl text-primary-700 mb-12 leading-relaxed text-left"
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.3, duration: 0.8 }}
-                    >
-                        Handcrafted with love, baked to perfection. Discover our exquisite collection of artisan cakes and pastries.
-                    </motion.p>
+                        {/* Hero Description */}
+                        <motion.p
+                            className="text-lg md:text-xl text-gray-800 mb-10 leading-relaxed text-left"
+                            initial={{ opacity: 0, x: -50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.3, duration: 0.8 }}
+                        >
+                            Handcrafted with love, baked to perfection. Discover our exquisite collection of artisan cakes and pastries.
+                        </motion.p>
 
-                    {/* CTA Button */}
-                    <motion.a
-                        href="#shop"
-                        className="inline-block text-white font-semibold px-10 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 uppercase tracking-wider text-sm"
-                        style={{ backgroundColor: '#6E473B' }}
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.5, duration: 0.8 }}
-                    >
-                        Shop Now
-                    </motion.a>
+                        {/* CTA Button */}
+                        <motion.a
+                            href="#shop"
+                            className="inline-block text-gray-900 font-semibold px-10 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 uppercase tracking-wider text-sm backdrop-blur-xl border border-white/40"
+                            style={{
+                                background: 'rgba(255, 255, 255, 0.2)',
+                                boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+                                backdropFilter: 'blur(10px)',
+                                WebkitBackdropFilter: 'blur(10px)',
+                            }}
+                            initial={{ opacity: 0, x: -50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.5, duration: 0.8 }}
+                        >
+                            Shop Now
+                        </motion.a>
+                    </div>
                 </div>
             </div>
 
